@@ -1,0 +1,6 @@
+pgp1_1,pgp1,SequelI,/share/crsp/lab/seyedam/share/PACBIO/PB103/labelReads/talon_labeled.sam
+pgp1_2,pgp1,SequelI,/share/crsp/lab/seyedam/share/PACBIO/PB104/labelReads/talon_labeled.sam
+excite_neuron_1,exitatory_neuron,SequelI,/share/crsp/lab/seyedam/share/PACBIO/PB105/labelReads/talon_labeled.sam
+excite_neuron_2,exitatory_neuron,SequelI,/share/crsp/lab/seyedam/share/PACBIO/PB106/labelReads/talon_labeled.sam
+astro_1,astrocyte,SequelII,/share/crsp/lab/seyedam/share/PACBIO/PB306/labelReads/talon_labeled.sam
+astro_2,astrocyte,SequelII,/share/crsp/lab/seyedam/share/PACBIO/PB307/labelReads/talon_labeled.sam

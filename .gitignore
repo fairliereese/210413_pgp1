@@ -1,0 +1,7 @@
+*.p
+*tsv
+*gtf
+*.db
+*.e
+*.ipynb_checkpoints/
+*.o
