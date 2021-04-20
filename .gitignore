@@ -1,3 +1,7 @@
+*.bed
+*.bam
+*.bai
+*.sam
 *.p
 *tsv
 *gtf
