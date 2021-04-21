@@ -1465,11 +1465,13 @@ email = 'freese@uci.edu' # email of hub creator
 url = 'http://crick.bio.uci.edu/freese/210413_pgp1_hub/'
 
 # ssh location of hub (used to copy)
-# if you do not want to automatically move files to server then don't provide
-# an argument to scp_location in the `make_hub` call. 
+# if you do not want to automatically move files to server, use the 
+# commented-out version of the `make_hub()` call. 
 scp_location = 'freese@crick.bio.uci.edu:~/pub/210413_pgp1_hub/'
 
-make_hub(url, c_dict, samples, genome, hub_name, email, scp_location=None)
+make_hub(url, c_dict, samples, genome, hub_name, email, scp_location=scp_location)
+# make_hub(url, c_dict, samples, genome, hub_name, email, scp_location=None)
+
 ```
 
 
@@ -1559,3 +1561,6 @@ def make_hub(url, c_dict, samples, genome, hub_name, email, scp_location=None):
         cmd = shlex.split(cmd)
         result = subprocess.run(cmd)
 ```
+A (cropped) view of the TPD52L2 locus on the track hub, with TSSs in black, astrocyte reads in orange, PGP1 reads in blue, and excitatory neuron reads in pink. Blue highlights (added afterward) show locations of alternative exons
+
+![png](track_hub.png)
