@@ -15,7 +15,7 @@ Note:
 ```bash
 # download files
 wget http://crick.bio.uci.edu/freese/210413_pgp1_hub/encode_files_dl.txt .
-xargs -L 1 curl -O -J -L < files.txt
+xargs -L 1 curl -O -J -L < encode_files_dl.txt
 
 # unzip
 gunzip *fastq.gz
@@ -873,7 +873,7 @@ def test_gene(gene_df, conditions, col, id_col, rc=10):
     # limit to just isoforms with > 0 expression in both conditions
     cond1 = conditions[0]
     cond2 = conditions[1]
-    gene_df = gene_df.loc[(gene_df[cond1]>0)&(gene_df[cond2]>0)]
+    gene_df = gene_df.loc[(gene_df[cond1]>0)|(gene_df[cond2]>0)]
     
     # does this gene reach the desired read count threshold?
     for cond in conditions:
