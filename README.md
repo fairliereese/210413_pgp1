@@ -558,7 +558,7 @@ Get the read names associated with each TSS peak so that we can associate TSSs w
 ```bash
 merged_bam=talon_tmp/merged.bam
 python ${tss_dir}tss_reads.py \
-    -i $merged.bam \
+    -i $merged_bam \
     -r unfilt_tss.bed \
     -o tss_reads.bed
 ```
