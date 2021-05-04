@@ -519,7 +519,7 @@ rg_tags="pgp1_1 pgp1_2 excite_neuron_1 excite_neuron_2 astro_1 astro_2"
 samtools view -H $in_bam > header.sam
 for tag in $rg_tags
 do
-    printf '@RG\tID:${tag}\tPL:PacBio\tSM:PGP1\n' >> header.sam
+    printf "@RG\tID:${tag}\tPL:PacBio\tSM:PGP1\n" >> header.sam
 done
 samtools reheader header.sam $in_bam > $out_bam
 
