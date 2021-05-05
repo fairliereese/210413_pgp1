@@ -177,7 +177,7 @@ printf "astro_2,astrocyte,SequelII,astro_2_labeled.sam\n" >> talon_config.csv
 ### Run TALON 
 
 ```bash
-talon \
+talon \d
     --f talon_config.csv \
     --db pgp1.db \
     --build hg38 \
@@ -1138,7 +1138,7 @@ cond_map = {'Astrocytes': ['astro_1', 'astro_2'], \
             'Excitatory neurons': ['excite_neuron_1', 'excite_neuron_2'], \
             'PGP1': ['pgp1_1', 'pgp1_2']}
 
-df = pd.read_csv(ab_file, sep='\t')a
+df = pd.read_csv(ab_file, sep='\t')
 adata = make_adata(df, cond_map, how='tss')
 
 fname = 'tss.h5ad'
@@ -1196,22 +1196,22 @@ tss_df = plot_tss_heatmap(adata, groups, groups, 'CALD1', 'figures/tss')
 
 
 ```python
-ab_file = 'pgp1_tss_talon_abundance.tsv'
+ab_file = 'pgp1_talon_abundance.tsv'
 pass_list = 'pgp1_pass_list.csv'
 cond_map = {'Astrocytes': ['astro_1', 'astro_2'], \
             'Excitatory neurons': ['excite_neuron_1', 'excite_neuron_2'], \
             'PGP1': ['pgp1_1', 'pgp1_2']}
 
 df = pd.read_csv(ab_file, sep='\t')
-adata = make_adata(df, cond_map, how='tss')
+adata = make_adata(df, cond_map, how='iso')
 
-fname = 'tss.h5ad'
+fname = 'iso.h5ad'
 adata.write(fname)
 
 # do one test for each pair of conditions
 tested = []
 conditions = ['Astrocytes', 'Excitatory neurons', 'PGP1']
-how = 'tss'
+how = 'iso'
 p = 0.05 # adjusted p-value threshold
 dpi = 10 # change in percent usage (dpi) threshold
 for c1 in conditions:
