@@ -1203,7 +1203,7 @@ cond_map = {'Astrocytes': ['astro_1', 'astro_2'], \
             'PGP1': ['pgp1_1', 'pgp1_2']}
 
 df = pd.read_csv(ab_file, sep='\t')
-adata = make_adata(df, cond_map, how='iso')
+adata = make_adata(df, cond_map, how='iso', pass_list=pass_list)
 
 fname = 'iso.h5ad'
 adata.write(fname)
