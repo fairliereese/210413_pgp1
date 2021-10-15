@@ -177,7 +177,7 @@ printf "astro_2,astrocyte,SequelII,astro_2_labeled.sam\n" >> talon_config.csv
 ### Run TALON 
 
 ```bash
-talon \d
+talon \
     --f talon_config.csv \
     --db pgp1.db \
     --build hg38 \
